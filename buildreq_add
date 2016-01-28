@@ -55,3 +55,4 @@ linecache2-python
 MarkupSafe-python
 taskflow
 enum34-python
+SQLAlchemy-Utils-python
