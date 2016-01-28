@@ -1,18 +1,57 @@
 CHANGES
 =======
 
+1.26.0
+------
+
+* Some additional engine logging
+* Allow for alterations in decider 'area of influence'
+* Fix wrong usage of iter_utils.unique_seen
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Use the retrying lib. to do basic sqlalchemy engine validation
+* For taskflow patterns don't show taskflow.patterns prefix
+* Rename '_emit' -> '_try_emit' since it is best-effort (not ensured)
+* Cache atom name -> actions and provide accessor function
+* Quote/standardize atom name output
+* Use shared util helper for driver name + config extraction
+* Fix currently broken and inactive mysql tests
+* Trap and expose exception any 'args'
+* Revert "Remove failure version number"
+* Move all internal blather usage/calls to trace usage/calls
+* Start rename of BLATHER -> TRACE
+* Add ability of job poster/job iterator to wait for jobs to complete
+* Updated from global requirements
+* Use 'match_type' utility function instead of staticmethod
+* Remove failure version number
+* Translate kazoo exceptions into job equivalents if register_entity fails
+* Change name of misc.ensure_dict to misc.safe_copy_dict
+* Avoid recreating notify details for each dispatch iteration
+* fix doc change caused by the change of tooz
+* Deprecated tox -downloadcache option removed
+* Updated from global requirements
+* Add some useful commentary on rebinding processes
+* Use small helper routine to fetch atom metadata entries
+* Remove 'MANIFEST.in'
+* Change engine 'self._check' into a decorator
+
 1.25.0
 ------
 
 * Move validation of compiled unit out of compiler
 * Allow provided flow to be empty
+* Move engine options extraction to __init__ methods
 * Updated from global requirements
 * Updated from global requirements
+* Convert executor proxied engine options into their correct type
 * Enable conversion of the tree nodes into a digraph
+* Use the misc.ensure_dict helper in conductor engine options saving
 * Add optional 'defer_reverts' behavior
 * Adding notification points for job completion
 * Remove python 2.6 and cleanup tox.ini
 * Correctly apply deciders across flow boundaries
+* Move 'convert_to_timeout' to timing type as a helper function
 * Use conductor entity class constant instead of raw string
 * Add a executor backed conductor and have existing impl. use it
 * Update docstrings on entity type
@@ -25,6 +64,7 @@ CHANGES
 * Updated from global requirements
 * Register conductor information on jobboard
 * Add atom priority ability
+* Add validation of base exception type(s) in failure type
 * Fix order of assertEqual for unit.test_*
 * Fix order of assertEqual for unit.worker_based
 * Fix order of assertEqual for unit.persistence
@@ -38,6 +78,7 @@ CHANGES
 * Updated from global requirements
 * feat: add max_dispatches arg to conductor's run
 * Ensure node 'remove' and 'disassociate' can not be called when frozen
+* Add in-memory backend delete() in recursive/non-recursive modes
 * Use batch 'get_atoms_states' where we can
 * Make more of the WBE logging and '__repr__' message more useful
 * Fix bad sphinx module reference
@@ -61,6 +102,7 @@ CHANGES
 * Use graphs as the underlying structure of patterns
 * Updated from global requirements
 * Fix '_cache_get' multiple keyword argument name overlap
+* Use the sqlalchemy-utils json type instead of our own
 
 1.21.0
 ------
@@ -204,6 +246,7 @@ CHANGES
 
 * Address concurrent mutation of sqlalchemy backend
 * Add indestructible 99 bottles of beer example
+* Use alembic upgrade function/command directly
 * Updated from global requirements
 * Remove usage of deprecated 'task_notifier' property in build_car example
 * Add `simple_linear_listening` example to generated docs
