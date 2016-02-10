@@ -1,10 +1,28 @@
 CHANGES
 =======
 
+1.27.0
+------
+
+* Updated from global requirements
+* Handle cases where exc_args can't be serialized as JSON in the WBE
+* Enable OS_LOG_CAPTURE so that logs can be seen (on error)
+* Retrieve the store from flowdetails as well, if it exists
+* Disable oslotest LOG capturing
+* Updated from global requirements
+* Updated from global requirements
+* Use helper function for post-atom-completion work
+* Add useful/helpful comment to retry scheduler
+* Updated from global requirements
+* Updated from global requirements
+* Remove stray LOG.blather
+
 1.26.0
 ------
 
 * Some additional engine logging
+* Replace deprecated library function os.popen() with subprocess
+* Add comment as to why we continue when tallying edge decider nay voters
 * Allow for alterations in decider 'area of influence'
 * Fix wrong usage of iter_utils.unique_seen
 * Updated from global requirements
@@ -34,6 +52,7 @@ CHANGES
 * Add some useful commentary on rebinding processes
 * Use small helper routine to fetch atom metadata entries
 * Remove 'MANIFEST.in'
+* Pass through run timeout in engine run()
 * Change engine 'self._check' into a decorator
 
 1.25.0
@@ -48,12 +67,14 @@ CHANGES
 * Enable conversion of the tree nodes into a digraph
 * Use the misc.ensure_dict helper in conductor engine options saving
 * Add optional 'defer_reverts' behavior
+* Add public property from storage to flowdetail.meta
 * Adding notification points for job completion
 * Remove python 2.6 and cleanup tox.ini
 * Correctly apply deciders across flow boundaries
 * Move 'convert_to_timeout' to timing type as a helper function
 * Use conductor entity class constant instead of raw string
 * Add a executor backed conductor and have existing impl. use it
+* Add flow durations to DurationListener
 * Update docstrings on entity type
 * Move 'fill_iter' to 'iter_utils.fill'
 
@@ -80,6 +101,7 @@ CHANGES
 * Ensure node 'remove' and 'disassociate' can not be called when frozen
 * Add in-memory backend delete() in recursive/non-recursive modes
 * Use batch 'get_atoms_states' where we can
+* Use automaton's converters/pydot
 * Make more of the WBE logging and '__repr__' message more useful
 * Fix bad sphinx module reference
 * Relabel internal engine 'event' -> 'outcome'
@@ -169,6 +191,7 @@ CHANGES
 ------
 
 * Updated from global requirements
+* Use 'addCleanup' instead of 'tearDown' in engine(s) test
 * Update 'make_client' kazoo docs and link to them
 * Remove **most** usage of taskflow.utils in examples
 * Move doc8 to being a normal test requirement in test-requirements.txt
