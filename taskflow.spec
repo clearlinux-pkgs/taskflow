@@ -4,7 +4,7 @@
 #
 Name     : taskflow
 Version  : 1.27.0
-Release  : 26
+Release  : 27
 URL      : http://tarballs.openstack.org/taskflow/taskflow-1.27.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-1.27.0.tar.gz
 Summary  : Taskflow structured state management library.
@@ -22,19 +22,15 @@ BuildRequires : Sphinx-python
 BuildRequires : alembic-python
 BuildRequires : amqp-python
 BuildRequires : anyjson-python
-BuildRequires : automaton-python
-BuildRequires : cachetools-python
 BuildRequires : decorator-python
 BuildRequires : discover-python
 BuildRequires : docutils-python
 BuildRequires : enum34-python
 BuildRequires : extras
 BuildRequires : extras-python
-BuildRequires : fasteners-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
 BuildRequires : futures-python
-BuildRequires : futurist-python
 BuildRequires : hacking
 BuildRequires : iso8601-python
 BuildRequires : jsonschema-python
@@ -68,6 +64,7 @@ BuildRequires : python3-dev
 BuildRequires : pytz-python
 BuildRequires : redis-python
 BuildRequires : requests-python
+BuildRequires : retrying-python
 BuildRequires : setuptools
 BuildRequires : six
 BuildRequires : six-python
@@ -89,16 +86,13 @@ Please see https://alembic.readthedocs.org/en/latest/index.html for general docu
 %package python
 Summary: python components for the taskflow package.
 Group: Default
-Requires: automaton-python
-Requires: cachetools-python
 Requires: enum34-python
-Requires: fasteners-python
 Requires: futures-python
-Requires: futurist-python
 Requires: jsonschema-python
 Requires: networkx-python
 Requires: oslo.serialization-python
 Requires: oslo.utils-python
+Requires: retrying-python
 Requires: six-python
 Requires: stevedore
 
