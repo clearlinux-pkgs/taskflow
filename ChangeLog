@@ -1,10 +1,23 @@
 CHANGES
 =======
 
+1.28.0
+------
+
+* Add WBE worker expiry
+* Some WBE protocol/executor cleanups
+* Remove need for separate notify thread
+* Updated from global requirements
+* Don't bother scanning for workers if no new messages arrived
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
 1.27.0
 ------
 
 * Updated from global requirements
+* Fix for WBE sporadic timeout of tasks
 * Handle cases where exc_args can't be serialized as JSON in the WBE
 * Enable OS_LOG_CAPTURE so that logs can be seen (on error)
 * Retrieve the store from flowdetails as well, if it exists
