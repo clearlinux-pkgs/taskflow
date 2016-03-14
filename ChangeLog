@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+1.30.0
+------
+
+* Updated from global requirements
+* Sqlalchemy-utils double entry (already in test-requirements.txt)
+
+1.29.0
+------
+
+* Updated from global requirements
+* Add missing direct dependency for sqlalchemy-utils
+
 1.28.0
 ------
 
