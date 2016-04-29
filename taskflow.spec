@@ -4,7 +4,7 @@
 #
 Name     : taskflow
 Version  : 1.30.0
-Release  : 30
+Release  : 31
 URL      : http://tarballs.openstack.org/taskflow/taskflow-1.30.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-1.30.0.tar.gz
 Summary  : Taskflow structured state management library.
