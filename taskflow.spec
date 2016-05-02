@@ -4,7 +4,7 @@
 #
 Name     : taskflow
 Version  : 1.30.0
-Release  : 32
+Release  : 33
 URL      : http://tarballs.openstack.org/taskflow/taskflow-1.30.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-1.30.0.tar.gz
 Summary  : Taskflow structured state management library.
@@ -15,7 +15,6 @@ BuildRequires : Babel-python
 BuildRequires : Jinja2
 BuildRequires : Mako-python
 BuildRequires : MarkupSafe-python
-BuildRequires : PyMySQL-python
 BuildRequires : Pygments
 BuildRequires : SQLAlchemy-Utils-python
 BuildRequires : SQLAlchemy-python
@@ -23,18 +22,19 @@ BuildRequires : Sphinx-python
 BuildRequires : alembic-python
 BuildRequires : amqp-python
 BuildRequires : anyjson-python
-BuildRequires : chardet-python
+BuildRequires : automaton-python
+BuildRequires : cachetools-python
 BuildRequires : decorator-python
 BuildRequires : discover-python
-BuildRequires : doc8-python
 BuildRequires : docutils-python
 BuildRequires : enum34-python
-BuildRequires : eventlet-python
 BuildRequires : extras
 BuildRequires : extras-python
+BuildRequires : fasteners-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
 BuildRequires : futures-python
+BuildRequires : futurist-python
 BuildRequires : hacking
 BuildRequires : iso8601-python
 BuildRequires : jsonschema-python
@@ -60,18 +60,14 @@ BuildRequires : pluggy
 BuildRequires : psycopg2-python
 BuildRequires : py-python
 BuildRequires : pyflakes-python
-BuildRequires : pyrsistent-python
 BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-editor-python
 BuildRequires : python-mimeparse-python
 BuildRequires : python-mock
 BuildRequires : python3-dev
 BuildRequires : pytz-python
 BuildRequires : redis-python
 BuildRequires : requests-python
-BuildRequires : restructuredtext_lint-python
-BuildRequires : retrying-python
 BuildRequires : setuptools
 BuildRequires : six
 BuildRequires : six-python
@@ -93,13 +89,16 @@ Please see https://alembic.readthedocs.org/en/latest/index.html for general docu
 %package python
 Summary: python components for the taskflow package.
 Group: Default
+Requires: automaton-python
+Requires: cachetools-python
 Requires: enum34-python
+Requires: fasteners-python
 Requires: futures-python
+Requires: futurist-python
 Requires: jsonschema-python
 Requires: networkx-python
 Requires: oslo.serialization-python
 Requires: oslo.utils-python
-Requires: retrying-python
 Requires: six-python
 Requires: stevedore
 
