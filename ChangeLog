@@ -1,16 +1,61 @@
 CHANGES
 =======
 
+2.2.0
+-----
+
+* Don't use deprecated method timeutils.isotime
+
+2.1.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Split revert/execute missing args messages
+* Updated from global requirements
+* Instead of a multiprocessing queue use sockets via asyncore
+* Add a simple sanity test for pydot outputting
+
+2.0.0
+-----
+
+* Updated from global requirements
+* Fix documentation related to missing BaseTask class
+* Remove deprecated things for 2.0 release
+* Always used the library packaged mock
+
+1.32.0
+------
+
+* Attempt to cancel active futures when suspending is underway
+* Allow for specifying green threaded to parallel engine
+* Make conductor.stop stop the running engine gracefully
+
+1.31.0
+------
+
+* Updated from global requirements
+* Don't set html_last_updated_fmt without git
+* Updated from global requirements
+* Add the ability to skip resolving from activating
+* Fix export_to_dot for networkx package changes
+* Ensure upgrade for sqlalchemy is protected by a lock
+* Add periodic jobboard refreshing (incase of sync issues)
+* Fallback if git is absent
+* Allow for revert to have a different argument list from execute
+
 1.30.0
 ------
 
 * Updated from global requirements
+* Use a automaton machine for WBE request state machine
 * Sqlalchemy-utils double entry (already in test-requirements.txt)
 
 1.29.0
 ------
 
 * Updated from global requirements
+* Refactor Atom/BaseTask/Task/Retry class hierarchy
 * Add missing direct dependency for sqlalchemy-utils
 
 1.28.0
@@ -24,12 +69,15 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
+* Allow cachedproperty to avoid locking
+* Spice up WBE banner and add simple worker __main__ entrypoint
 
 1.27.0
 ------
 
 * Updated from global requirements
 * Fix for WBE sporadic timeout of tasks
+* Add some basic/initial engine statistics
 * Handle cases where exc_args can't be serialized as JSON in the WBE
 * Enable OS_LOG_CAPTURE so that logs can be seen (on error)
 * Retrieve the store from flowdetails as well, if it exists
@@ -37,9 +85,12 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Use helper function for post-atom-completion work
+* Ensure that the engine finishes up even under sent-in failures
+* 99 bottles example trace logging was not being output
 * Add useful/helpful comment to retry scheduler
 * Updated from global requirements
 * Updated from global requirements
+* Replace clear zookeeper python with clear zookeeper bash
 * Remove stray LOG.blather
 
 1.26.0
@@ -48,6 +99,7 @@ CHANGES
 * Some additional engine logging
 * Replace deprecated library function os.popen() with subprocess
 * Add comment as to why we continue when tallying edge decider nay voters
+* Add rundimentary and/or non-optimized job priorities
 * Allow for alterations in decider 'area of influence'
 * Fix wrong usage of iter_utils.unique_seen
 * Updated from global requirements
@@ -168,6 +220,7 @@ CHANGES
 * Fix flow states link
 * Avoid running this example if zookeeper is not found
 * Updated from global requirements
+* Have the storage class provide a 'change_flow_state' method
 
 1.19.0
 ------
