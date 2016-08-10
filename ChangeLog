@@ -1,16 +1,40 @@
 CHANGES
 =======
 
+2.4.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Remove white space between print and ()
+* Updated from global requirements
+* Add Python 3.5 classifier and venv
+* Replace assertEqual(None, *) with assertIsNone in tests
+
+2.3.0
+-----
+
+* Updated from global requirements
+* remove unused LOG
+* Fixes: typo error in comments
+* Updated from global requirements
+* Fix some misspellings in the function name and descriptions
+* Updated from global requirements
+
 2.2.0
 -----
 
 * Don't use deprecated method timeutils.isotime
+* Add tests to verify kwargs behavior on revert validation
+* Make tests less dependent on transient state
 
 2.1.0
 -----
 
 * Updated from global requirements
+* Ensure the fetching jobs does not fetch anything when in bad state
 * Updated from global requirements
+* Use the full 'get_execute_failures' vs the shortname
 * Split revert/execute missing args messages
 * Updated from global requirements
 * Instead of a multiprocessing queue use sockets via asyncore
