@@ -1,10 +1,21 @@
 CHANGES
 =======
 
+2.6.0
+-----
+
+
+2.5.0
+-----
+
+* Updated from global requirements
+
 2.4.0
 -----
 
 * Updated from global requirements
+* Start to add a location for contributed useful tasks/flows/more
+* Change dependency to use flavors
 * Updated from global requirements
 * Remove white space between print and ()
 * Updated from global requirements
