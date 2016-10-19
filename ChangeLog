@@ -1,6 +1,21 @@
 CHANGES
 =======
 
+2.7.0
+-----
+
+* Changed the home-page link
+* Using assertIsNone() instead of assertIs(None, ..)
+* Updated from global requirements
+* Fix a typo in documentation
+* Fix typo: remove redundant 'that'
+* Updated from global requirements
+* Fix a typo in logging.py
+* Use method ensure_tree from oslo.utils
+* Make failure formatter configurable for DynamicLoggingListener
+* Updated from global requirements
+* Some classes not define __ne__() built-in function
+
 2.6.0
 -----
 
@@ -9,6 +24,7 @@ CHANGES
 -----
 
 * Updated from global requirements
+* Add logging around metadata, ignore tallying + history
 
 2.4.0
 -----
