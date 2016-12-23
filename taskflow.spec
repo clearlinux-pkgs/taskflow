@@ -4,7 +4,7 @@
 #
 Name     : taskflow
 Version  : 2.7.0
-Release  : 42
+Release  : 43
 URL      : http://tarballs.openstack.org/taskflow/taskflow-2.7.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-2.7.0.tar.gz
 Summary  : Taskflow structured state management library.
@@ -22,8 +22,6 @@ BuildRequires : Sphinx-python
 BuildRequires : alembic-python
 BuildRequires : amqp-python
 BuildRequires : anyjson-python
-BuildRequires : automaton-python
-BuildRequires : cachetools-python
 BuildRequires : configparser-python
 BuildRequires : decorator-python
 BuildRequires : discover-python
@@ -31,11 +29,9 @@ BuildRequires : docutils-python
 BuildRequires : enum34-python
 BuildRequires : extras
 BuildRequires : extras-python
-BuildRequires : fasteners-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
 BuildRequires : futures-python
-BuildRequires : futurist-python
 BuildRequires : hacking
 BuildRequires : imagesize-python
 BuildRequires : iso8601-python
@@ -61,6 +57,7 @@ BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : psycopg2-python
 BuildRequires : py-python
+BuildRequires : pydotplus-python
 BuildRequires : pyflakes-python
 BuildRequires : pyparsing-python
 BuildRequires : pytest
@@ -69,7 +66,9 @@ BuildRequires : python-mimeparse-python
 BuildRequires : python-mock
 BuildRequires : python3-dev
 BuildRequires : pytz-python
+BuildRequires : redis-python
 BuildRequires : requests-python
+BuildRequires : retrying-python
 BuildRequires : setuptools
 BuildRequires : six
 BuildRequires : six-python
@@ -94,12 +93,8 @@ Group: Default
 Requires: SQLAlchemy-Utils-python
 Requires: SQLAlchemy-python
 Requires: alembic-python
-Requires: automaton-python
-Requires: cachetools-python
 Requires: enum34-python
-Requires: fasteners-python
 Requires: futures-python
-Requires: futurist-python
 Requires: hacking
 Requires: jsonschema-python
 Requires: kazoo-python
@@ -110,6 +105,9 @@ Requires: oslo.utils-python
 Requires: oslosphinx-python
 Requires: oslotest-python
 Requires: psycopg2-python
+Requires: pydotplus-python
+Requires: redis-python
+Requires: retrying-python
 Requires: six-python
 Requires: stevedore
 Requires: testscenarios
