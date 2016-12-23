@@ -4,7 +4,7 @@
 #
 Name     : taskflow
 Version  : 2.7.0
-Release  : 41
+Release  : 42
 URL      : http://tarballs.openstack.org/taskflow/taskflow-2.7.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-2.7.0.tar.gz
 Summary  : Taskflow structured state management library.
