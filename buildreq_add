@@ -27,7 +27,7 @@ kombu-python
 testtools-python
 testtools
 python-mock
-oslotest-python
+oslotest
 hacking
 requests-python
 Jinja2
