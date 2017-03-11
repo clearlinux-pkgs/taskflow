@@ -6,7 +6,7 @@
 #
 Name     : taskflow
 Version  : 2.7.0
-Release  : 44
+Release  : 45
 URL      : http://tarballs.openstack.org/taskflow/taskflow-2.7.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-2.7.0.tar.gz
 Source99 : http://tarballs.openstack.org/taskflow/taskflow-2.7.0.tar.gz.asc
@@ -50,78 +50,11 @@ Requires: stevedore
 Requires: testscenarios
 Requires: testtools
 Requires: zake
-BuildRequires : Babel-python
-BuildRequires : Jinja2
-BuildRequires : Mako-python
-BuildRequires : MarkupSafe-python
-BuildRequires : Pygments
-BuildRequires : SQLAlchemy-Utils-python
-BuildRequires : SQLAlchemy-python
-BuildRequires : Sphinx-python
-BuildRequires : alembic-python
-BuildRequires : amqp-python
-BuildRequires : anyjson-python
-BuildRequires : configparser-python
-BuildRequires : decorator-python
-BuildRequires : discover-python
-BuildRequires : docutils-python
-BuildRequires : enum34-python
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : fixtures-python
-BuildRequires : flake8-python
-BuildRequires : functools32-python
-BuildRequires : futures-python
-BuildRequires : hacking
-BuildRequires : iso8601-python
-BuildRequires : jsonschema-python
-BuildRequires : kazoo-python
-BuildRequires : kombu-python
-BuildRequires : linecache2-python
-BuildRequires : mccabe-python
-BuildRequires : mox3-python
-BuildRequires : msgpack-python-python
-BuildRequires : netaddr
-BuildRequires : netifaces-python
-BuildRequires : networkx-python
-BuildRequires : ordereddict-python
-BuildRequires : oslo.i18n-python
-BuildRequires : oslo.serialization-python
-BuildRequires : oslo.utils-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : psycopg2-python
-BuildRequires : py-python
-BuildRequires : pydotplus-python
-BuildRequires : pyflakes-python
-BuildRequires : pyparsing-python
-BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-mimeparse-python
-BuildRequires : python-mock
 BuildRequires : python3-dev
-BuildRequires : pytz-python
-BuildRequires : redis-python
-BuildRequires : requests-python
-BuildRequires : retrying-python
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : stevedore
-BuildRequires : taskflow
-BuildRequires : testrepository-python
-BuildRequires : testscenarios
-BuildRequires : testtools
-BuildRequires : testtools-python
-BuildRequires : tox
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
-BuildRequires : virtualenv
-BuildRequires : zake-python
 
 %description
 Please see https://alembic.readthedocs.org/en/latest/index.html for general documentation
@@ -139,17 +72,12 @@ python components for the taskflow package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1488898456
+export SOURCE_DATE_EPOCH=1489272503
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1488898456
+export SOURCE_DATE_EPOCH=1489272503
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
