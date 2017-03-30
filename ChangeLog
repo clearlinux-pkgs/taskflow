@@ -1,6 +1,45 @@
 CHANGES
 =======
 
+2.10.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Prepare for using standard python tests
+* Use https instead of http for git.openstack.org
+* Updated from global requirements
+* Update reno for stable/ocata
+* Protect storage better against external concurrent access
+
+2.9.0
+-----
+
+* Remove dep on monotonic
+* Rename engine analyzer to be named selector
+* Update author and author-email
+* Updated from global requirements
+* Updated from global requirements
+* Add Constraints support
+* Show team and repo badges on README
+
+2.8.0
+-----
+
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Updated from global requirements
+* Remove vim header from source files
+* Fix release notes gate job failure
+* Updated from global requirements
+* Use assertIs(Not)None to check for None
+* Fix typo in tox.ini
+* Fix broken link
+* Replace retrying with tenacity
+* Updated from global requirements
+* Add reno for release notes management
+* Updated from global requirements
+
 2.7.0
 -----
 
