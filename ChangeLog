@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+2.11.0
+------
+
+* Fix py35 test failure
+* Stop using oslotest.mockpatch
+* Updated from global requirements
+* python3.0 has deprecated LOG.warn
+
 2.10.0
 ------
 
@@ -27,7 +35,7 @@ CHANGES
 2.8.0
 -----
 
-* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
 * Updated from global requirements
 * Remove vim header from source files
 * Fix release notes gate job failure
@@ -50,10 +58,10 @@ CHANGES
 * Fix typo: remove redundant 'that'
 * Updated from global requirements
 * Fix a typo in logging.py
-* Use method ensure_tree from oslo.utils
+* Use method ensure\_tree from oslo.utils
 * Make failure formatter configurable for DynamicLoggingListener
 * Updated from global requirements
-* Some classes not define __ne__() built-in function
+* Some classes not define \_\_ne\_\_() built-in function
 
 2.6.0
 -----
@@ -75,7 +83,7 @@ CHANGES
 * Remove white space between print and ()
 * Updated from global requirements
 * Add Python 3.5 classifier and venv
-* Replace assertEqual(None, *) with assertIsNone in tests
+* Replace assertEqual(None, \*) with assertIsNone in tests
 
 2.3.0
 -----
@@ -100,7 +108,7 @@ CHANGES
 * Updated from global requirements
 * Ensure the fetching jobs does not fetch anything when in bad state
 * Updated from global requirements
-* Use the full 'get_execute_failures' vs the shortname
+* Use the full 'get\_execute\_failures' vs the shortname
 * Split revert/execute missing args messages
 * Updated from global requirements
 * Instead of a multiprocessing queue use sockets via asyncore
@@ -125,10 +133,10 @@ CHANGES
 ------
 
 * Updated from global requirements
-* Don't set html_last_updated_fmt without git
+* Don't set html\_last\_updated\_fmt without git
 * Updated from global requirements
 * Add the ability to skip resolving from activating
-* Fix export_to_dot for networkx package changes
+* Fix export\_to\_dot for networkx package changes
 * Ensure upgrade for sqlalchemy is protected by a lock
 * Add periodic jobboard refreshing (incase of sync issues)
 * Fallback if git is absent
@@ -160,7 +168,7 @@ CHANGES
 * Updated from global requirements
 * Updated from global requirements
 * Allow cachedproperty to avoid locking
-* Spice up WBE banner and add simple worker __main__ entrypoint
+* Spice up WBE banner and add simple worker \_\_main\_\_ entrypoint
 
 1.27.0
 ------
@@ -168,8 +176,8 @@ CHANGES
 * Updated from global requirements
 * Fix for WBE sporadic timeout of tasks
 * Add some basic/initial engine statistics
-* Handle cases where exc_args can't be serialized as JSON in the WBE
-* Enable OS_LOG_CAPTURE so that logs can be seen (on error)
+* Handle cases where exc\_args can't be serialized as JSON in the WBE
+* Enable OS\_LOG\_CAPTURE so that logs can be seen (on error)
 * Retrieve the store from flowdetails as well, if it exists
 * Disable oslotest LOG capturing
 * Updated from global requirements
@@ -191,13 +199,13 @@ CHANGES
 * Add comment as to why we continue when tallying edge decider nay voters
 * Add rundimentary and/or non-optimized job priorities
 * Allow for alterations in decider 'area of influence'
-* Fix wrong usage of iter_utils.unique_seen
+* Fix wrong usage of iter\_utils.unique\_seen
 * Updated from global requirements
 * Updated from global requirements
 * Updated from global requirements
 * Use the retrying lib. to do basic sqlalchemy engine validation
 * For taskflow patterns don't show taskflow.patterns prefix
-* Rename '_emit' -> '_try_emit' since it is best-effort (not ensured)
+* Rename '\_emit' -> '\_try\_emit' since it is best-effort (not ensured)
 * Cache atom name -> actions and provide accessor function
 * Quote/standardize atom name output
 * Use shared util helper for driver name + config extraction
@@ -208,10 +216,10 @@ CHANGES
 * Start rename of BLATHER -> TRACE
 * Add ability of job poster/job iterator to wait for jobs to complete
 * Updated from global requirements
-* Use 'match_type' utility function instead of staticmethod
+* Use 'match\_type' utility function instead of staticmethod
 * Remove failure version number
-* Translate kazoo exceptions into job equivalents if register_entity fails
-* Change name of misc.ensure_dict to misc.safe_copy_dict
+* Translate kazoo exceptions into job equivalents if register\_entity fails
+* Change name of misc.ensure\_dict to misc.safe\_copy\_dict
 * Avoid recreating notify details for each dispatch iteration
 * fix doc change caused by the change of tooz
 * Deprecated tox -downloadcache option removed
@@ -220,30 +228,30 @@ CHANGES
 * Use small helper routine to fetch atom metadata entries
 * Remove 'MANIFEST.in'
 * Pass through run timeout in engine run()
-* Change engine 'self._check' into a decorator
+* Change engine 'self.\_check' into a decorator
 
 1.25.0
 ------
 
 * Move validation of compiled unit out of compiler
 * Allow provided flow to be empty
-* Move engine options extraction to __init__ methods
+* Move engine options extraction to \_\_init\_\_ methods
 * Updated from global requirements
 * Updated from global requirements
 * Convert executor proxied engine options into their correct type
 * Enable conversion of the tree nodes into a digraph
-* Use the misc.ensure_dict helper in conductor engine options saving
-* Add optional 'defer_reverts' behavior
+* Use the misc.ensure\_dict helper in conductor engine options saving
+* Add optional 'defer\_reverts' behavior
 * Add public property from storage to flowdetail.meta
 * Adding notification points for job completion
 * Remove python 2.6 and cleanup tox.ini
 * Correctly apply deciders across flow boundaries
-* Move 'convert_to_timeout' to timing type as a helper function
+* Move 'convert\_to\_timeout' to timing type as a helper function
 * Use conductor entity class constant instead of raw string
 * Add a executor backed conductor and have existing impl. use it
 * Add flow durations to DurationListener
 * Update docstrings on entity type
-* Move 'fill_iter' to 'iter_utils.fill'
+* Move 'fill\_iter' to 'iter\_utils.fill'
 
 1.24.0
 ------
@@ -253,27 +261,27 @@ CHANGES
 * Register conductor information on jobboard
 * Add atom priority ability
 * Add validation of base exception type(s) in failure type
-* Fix order of assertEqual for unit.test_*
-* Fix order of assertEqual for unit.worker_based
+* Fix order of assertEqual for unit.test\_\*
+* Fix order of assertEqual for unit.worker\_based
 * Fix order of assertEqual for unit.persistence
 * Fix order of assertEqual for unit.patterns
 * Fix order of assertEqual for unit.jobs
-* Fix order of assertEqual for unit.action_engine
+* Fix order of assertEqual for unit.action\_engine
 
 1.23.0
 ------
 
 * Updated from global requirements
-* feat: add max_dispatches arg to conductor's run
+* feat: add max\_dispatches arg to conductor's run
 * Ensure node 'remove' and 'disassociate' can not be called when frozen
 * Add in-memory backend delete() in recursive/non-recursive modes
-* Use batch 'get_atoms_states' where we can
+* Use batch 'get\_atoms\_states' where we can
 * Use automaton's converters/pydot
-* Make more of the WBE logging and '__repr__' message more useful
+* Make more of the WBE logging and '\_\_repr\_\_' message more useful
 * Fix bad sphinx module reference
 * Relabel internal engine 'event' -> 'outcome'
 * No need for Oslo Incubator Sync
-* Use the node built-in 'dfs_iter' instead of recursion
+* Use the node built-in 'dfs\_iter' instead of recursion
 
 1.22.0
 ------
@@ -285,12 +293,12 @@ CHANGES
 * Remove dummy/placeholder 'ChangeLog' as its not needed
 * Remove ./taskflow/openstack/common as it no longer exists
 * Remove quotes from subshell call in bash script
-* Refactor common parts of 'get_maybe_ready_for' methods
+* Refactor common parts of 'get\_maybe\_ready\_for' methods
 * Fix the sphinx build path in .gitignore file
-* Change ignore-errors to ignore_errors
+* Change ignore-errors to ignore\_errors
 * Use graphs as the underlying structure of patterns
 * Updated from global requirements
-* Fix '_cache_get' multiple keyword argument name overlap
+* Fix '\_cache\_get' multiple keyword argument name overlap
 * Use the sqlalchemy-utils json type instead of our own
 
 1.21.0
@@ -304,13 +312,13 @@ CHANGES
 ------
 
 * Updated from global requirements
-* iter_nodes method added to flows
+* iter\_nodes method added to flows
 * Updated from global requirements
-* Use 'iter_utils.count' to determine how many unfinished nodes left
+* Use 'iter\_utils.count' to determine how many unfinished nodes left
 * Fix flow states link
 * Avoid running this example if zookeeper is not found
 * Updated from global requirements
-* Have the storage class provide a 'change_flow_state' method
+* Have the storage class provide a 'change\_flow\_state' method
 
 1.19.0
 ------
@@ -320,11 +328,11 @@ CHANGES
 * Add nicely made task structural diagram
 * Updated from global requirements
 * Remove some temporary variables not needed
-* Only remove all 'next_nodes' that were done
+* Only remove all 'next\_nodes' that were done
 * Fix busted stevedore doc(s) link
 * Extend and improve failure logging
 * Improve docstrings in graph flow to denote exceptions raised
-* Enable testr OS_DEBUG to be TRACE(blather) by default
+* Enable testr OS\_DEBUG to be TRACE(blather) by default
 * Updated from global requirements
 * Show intermediary compilation(s) when BLATHER is enabled
 
@@ -344,27 +352,27 @@ CHANGES
 ------
 
 * Bump futurist and remove waiting code in taskflow
-* Use the action engine '_check' helper method
+* Use the action engine '\_check' helper method
 * Modify listeners to handle the results now possible from revert()
-* Remove no longer used '_was_failure' static method
+* Remove no longer used '\_was\_failure' static method
 * Remove legacy py2.6 backwards logging compat. code
 * Updated from global requirements
 * Fix lack of space between functions
 * Create and use a serial retry executor
 * Just link to the worker engine docs instead of including a TOC inline
 * Link to run() method in engines doc
-* Add ability to reset an engine via a `reset` method
+* Add ability to reset an engine via a \`reset\` method
 
 1.16.0
 ------
 
 * Updated from global requirements
 * Use 'addCleanup' instead of 'tearDown' in engine(s) test
-* Update 'make_client' kazoo docs and link to them
-* Remove **most** usage of taskflow.utils in examples
+* Update 'make\_client' kazoo docs and link to them
+* Remove \*\*most\*\* usage of taskflow.utils in examples
 * Move doc8 to being a normal test requirement in test-requirements.txt
 * Updated from global requirements
-* Found another removal_version=? that should be removal_version=2.0
+* Found another removal\_version=? that should be removal\_version=2.0
 * Add deprecated module(s) for prior FSM/table code-base
 * Replace internal fsm + table with automaton library
 * Remove direct usage of timeutils overrides and use fixture
@@ -373,11 +381,11 @@ CHANGES
 ------
 
 * Provide a deprecated alias for the now removed stop watch class
-* Update all removal_version from being ? to being 2.0
+* Update all removal\_version from being ? to being 2.0
 * Add deprecated and only alias modules for the moved types
 * Unify the zookeeper/redis jobboard iterators
 * Updated from global requirements
-* Run the '99_bottles.py' demo at a fast rate when activated
+* Run the '99\_bottles.py' demo at a fast rate when activated
 * Use io.open vs raw open
 * Retain atom 'revert' result (or failure)
 * Update the version on the old/deprecated logbook module
@@ -385,11 +393,11 @@ CHANGES
 * Fix mock calls
 * Remove setup.cfg 'requires-python' incorrect entry
 * Compile lists of retry/task atoms at runtime compile time
-* Integrate futurist (and **remove** taskflow originating code)
-* Allow the 99_bottles.py demo to run in BLATHER mode
-* Make currently implemented jobs use @functools.total_ordering
-* Add more useful `__str__` to redis job
-* Show job posted and goodbye in 99_bottles.py example
+* Integrate futurist (and \*\*remove\*\* taskflow originating code)
+* Allow the 99\_bottles.py demo to run in BLATHER mode
+* Make currently implemented jobs use @functools.total\_ordering
+* Add more useful \`\_\_str\_\_\` to redis job
+* Show job posted and goodbye in 99\_bottles.py example
 * Rename logbook module -> models module
 * Notify on the individual engine steps
 
@@ -406,7 +414,7 @@ CHANGES
 0.13.0
 ------
 
-* Just make the compiler object at __init__ time
+* Just make the compiler object at \_\_init\_\_ time
 * Remove kazoo hack/fix for issue no longer needed
 * Add history.rst that uses generated 'ChangeLog' file
 * Add docstrings on runtime objects methods and link to them in docs
@@ -419,15 +427,15 @@ CHANGES
 * Updated from global requirements
 * Remove 2.6 classifier + 2.6 compatibility code
 * Remove reference to 'requirements-pyN.txt' files
-* Add smarter/better/faster impl. of `ensure_atoms`
-* Add bulk `ensure_atoms` method to storage
+* Add smarter/better/faster impl. of \`ensure\_atoms\`
+* Add bulk \`ensure\_atoms\` method to storage
 * Make it possible to see the queries executed (in BLATHER mode)
 * Add doc warning to engine components
 * Perform a few optimizations to decrease persistence interactions
 * Handle conductor ctrl-c more appropriately
 * Cache the individual atom schedulers at compile time
 * Split-off the additional retry states from the task states
-* Use the `excutils.raise_with_cause` after doing our type check
+* Use the \`excutils.raise\_with\_cause\` after doing our type check
 * Updated from global requirements
 * Use monotonic lib. to avoid finding monotonic time function
 * Document more of the retry subclasses special keyword arguments
@@ -439,11 +447,11 @@ CHANGES
 * Add indestructible 99 bottles of beer example
 * Use alembic upgrade function/command directly
 * Updated from global requirements
-* Remove usage of deprecated 'task_notifier' property in build_car example
-* Add `simple_linear_listening` example to generated docs
+* Remove usage of deprecated 'task\_notifier' property in build\_car example
+* Add \`simple\_linear\_listening\` example to generated docs
 * Handy access to INFO level
 * Switch badges from 'pypip.in' to 'shields.io'
-* Adding a revert_all option to retry controllers
+* Adding a revert\_all option to retry controllers
 * A few jobboard documentation tweaks
 * Use sphinx deprecated docstring markup
 * Use a class constant for the default path based backend path
@@ -453,13 +461,13 @@ CHANGES
 * Use a lru cache to limit the size of the internal file cache
 * Updated from global requirements
 * Use hash path lookup vs path finding
-* Remove all 'lock_utils' now that fasteners provides equivalents
-* Add a new `ls_r` method
+* Remove all 'lock\_utils' now that fasteners provides equivalents
+* Add a new \`ls\_r\` method
 * Updated from global requirements
 * Refactor machine builder + runner into single unit
-* Replace lock_utils lock(s) with fasteners package
+* Replace lock\_utils lock(s) with fasteners package
 * Updated from global requirements
-* Use shared '_check' function to check engine stages
+* Use shared '\_check' function to check engine stages
 * Remove a couple more useless 'pass' keywords found
 * Add a test that checks for task result visibility
 * Remove testing using persistence sqlalchemy backend with 'mysqldb'
@@ -468,9 +476,9 @@ CHANGES
 * Allow same deps for requires and provides in task
 * Remove 'pass' usage not needed
 * Only show state transitions to logging when in BLATHER mode
-* Fix updated_at column of sqlalchemy tables
+* Fix updated\_at column of sqlalchemy tables
 * Remove script already nuked from oslo-incubator
-* Ensure path_based abstract base class is included in docs
+* Ensure path\_based abstract base class is included in docs
 * Beef up docs on the logbook/flow detail/atom details models
 * Remove custom py26/py27 tox venvs no longer used
 * Executors come in via options config, not keyword arguments
@@ -502,17 +510,17 @@ CHANGES
 * Speed up memory backend via a path -> node reverse mapping
 * Updated from global requirements
 * Fix a typo in taskflow docs
-* Small refactoring of 'merge_uri' utility function
+* Small refactoring of 'merge\_uri' utility function
 * Fix post coverage job option not recognized
 * Refactor/reduce shared 'ensure(task/retry)' code
 * Move implementations into there own sub-sections
-* Remove run_cross_tests.sh
+* Remove run\_cross\_tests.sh
 * Move zookeeper jobboard constants to class level
 * Retain chain of missing dependencies
 * Expose fake filesystem 'join' and 'normpath'
 * Add + use diagram explaining retry controller area of influence
 * Add openclipart.org conductor image to conductor docs
-* Use oslo_utils eventletutils to warn about eventlet patching
+* Use oslo\_utils eventletutils to warn about eventlet patching
 * Test more engine types in argument passing unit test
 * Add a conductor running example
 * Replace more instance(s) of exception chaining with helper
@@ -521,7 +529,7 @@ CHANGES
 0.9.0
 -----
 
-* Validate correct exception subclass in 'raise_with_cause'
+* Validate correct exception subclass in 'raise\_with\_cause'
 * Remove link to kazoo eventlet handler
 * Add states generating venv and use pydot2
 * Add strict job state transition checking
@@ -531,7 +539,7 @@ CHANGES
 * Expose r/o listener callback + details filter callback
 * Expose listener notification type + docs
 * Ensure listener args are always a tuple/immutable
-* Include the 'dump_memory_backend' example in the docs
+* Include the 'dump\_memory\_backend' example in the docs
 * Make resolution/retry strategies more clear and better
 * Rename notifier 'listeners' to 'topics'
 * Mention link to states doc in notify state transitions
@@ -556,7 +564,7 @@ CHANGES
 * Allow ls() to list recursively (using breadth-first)
 * Make an attempt at having taskflow exceptions print causes better
 * fix renamed class to call super correctly
-* Turn 'check_who' into a decorator
+* Turn 'check\_who' into a decorator
 * Use 'node' terminology instead of 'item' terminology
 * Remove 11635 bug reference
 * Allow providing a node stringify function to tree pformat
@@ -564,7 +572,7 @@ CHANGES
 * Just unify having a single requirements.txt file
 * Fix a couple of spelling and grammar errors
 * Add memory backend get() support
-* Make the graph '_unsatisfied_requires' be a staticmethod
+* Make the graph '\_unsatisfied\_requires' be a staticmethod
 * Add more comments to fake in-memory filesystem
 * Add a set of tests to the in memory fake filesystem
 
@@ -586,22 +594,22 @@ CHANGES
 * Use binary/encode decode helper routines in dir backend
 * Rename memory backend filesystem -> fake filesystem
 * Just let the future executors handle the max workers
-* Always return scope walker instances from `fetch_scopes_for`
+* Always return scope walker instances from \`fetch\_scopes\_for\`
 * Give the GC a break
-* Use the class name instead of the TYPE property in __str__
+* Use the class name instead of the TYPE property in \_\_str\_\_
 * Just use the class name instead of TYPE constant
 * Ensure we have a 'coverage-package-name'
 * Attempt to extract traceback from exception
 * Use compatible map and update map/reduce task docs
 * Update engine docs with new validation stage
 * Ensure we register & deregister conductor listeners
-* Rename attribute '_graph' to '_execution_graph'
+* Rename attribute '\_graph' to '\_execution\_graph'
 * Add a log statement pre-validation that dumps graph info
 * Have this example exit non-zero if incorrect results
 * Use a collections.namedtuple for the request work unit
 * Some small wbe engine doc tweaks
 * Add newline to avoid sphinx warning
-* Allow passing 'many_handler' to fetch_all function
+* Allow passing 'many\_handler' to fetch\_all function
 * Ensure event time listener is in listeners docs
 * Add a in-memory backend dumping example
 * Added a map and a reduce task
@@ -615,10 +623,10 @@ CHANGES
 * Add + use failure json schema validation
 * Use ordered[set/dict] to retain ordering
 * Allow injected atom args to be persisted
-* add _listeners_from_job method to Conductor base
+* add \_listeners\_from\_job method to Conductor base
 * update uses of TimingListener to DurationListener
 * Added EventTimeListner to record when events occur
-* added update_flow_metadata method to Storage class
+* added update\_flow\_metadata method to Storage class
 * Retain nested causes where/when we can
 * Denote issue 17911 has been merged/accepted
 * Persistence backend refactor
@@ -652,7 +660,7 @@ CHANGES
 * Stick to one space after a period
 * Refactor parts of the periodic worker
 * Use oslo.utils encodeutils for encode/decode functions
-* Bring over pretty_tox.sh from nova/heat/others
+* Bring over pretty\_tox.sh from nova/heat/others
 * Tweak some of the types thread safety docstrings
 * Add pypi link badges
 * Switch the note about process pool executor to warning
@@ -661,9 +669,9 @@ CHANGES
 * Remove WBE experimental documentation note
 * Use the enum library for the retry strategy enumerations
 * Use debtcollector library to replace internal utility
-* add get_flow_details and get_atom_details to all backends
+* add get\_flow\_details and get\_atom\_details to all backends
 * Tweaks to atom documentation
-* Update Flow::__str__
+* Update Flow::\_\_str\_\_
 * Add todo note for kombu pull request
 * Move 'provides' and 'name' to instance attributes
 * Allow loading conductors via entrypoints
@@ -702,7 +710,7 @@ CHANGES
 * Tweak the WBE diagram (and present it as an svg)
 * Remove duplicate code
 * Improved diagram for Taskflow
-* Bump up the env_builder.sh to 2.7.9
+* Bump up the env\_builder.sh to 2.7.9
 * Add a capturing listener (for test or other usage)
 * Add + use a staticmethod to fetch the immediate callables
 * Just directly access the callback attributes
@@ -724,7 +732,7 @@ CHANGES
 * Link WBE docs together better (especially around arguments)
 * Emit a warning when no routing keys provided on publish()
 * Center SVG state diagrams
-* Use importutils.try_import for optional eventlet imports
+* Use importutils.try\_import for optional eventlet imports
 * Shrink the WBE request transition SVG image size
 * Add a thread bundle helper utility + tests
 * Make all/most usage of type errors follow a similar pattern
@@ -748,13 +756,13 @@ CHANGES
 * Move the jobboard/job bases to a jobboard/base module
 * Have the serial task executor shutdown/restart its executor
 * Mirror the task executor methods in the retry action
-* Add back a 'eventlet_utils' helper utility module
+* Add back a 'eventlet\_utils' helper utility module
 * Use constants for runner state machine event names
 * Remove 'SaveOrderTask' and test state in class variables
 * Provide the stopwatch elapsed method a maximum
 * Fix unused and conflicting variables
-* Switch to using 'oslo_serialization' vs 'oslo.serialization'
-* Switch to using 'oslo_utils' vs 'oslo.utils'
+* Switch to using 'oslo\_serialization' vs 'oslo.serialization'
+* Switch to using 'oslo\_utils' vs 'oslo.utils'
 * Add executor statistics
 * Use oslo.utils reflection for class name
 * Add split time capturing to the stop watch
@@ -762,7 +770,7 @@ CHANGES
 * Create and use a multiprocessing sync manager subclass
 * Use a single sender
 * Updated from global requirements
-* Include the 'old_state' in all currently provided listeners
+* Include the 'old\_state' in all currently provided listeners
 * Update the README.rst with accurate requirements
 * Include docstrings for parallel engine types/strings supported
 * The taskflow logger module does not provide a logging adapter
@@ -782,7 +790,7 @@ CHANGES
 * Update statement around stopwatch thread safety
 * Register with 'ANY' in the cloned process
 * Add edge labels for engine states
-* Remove less than useful action_engine __str__
+* Remove less than useful action\_engine \_\_str\_\_
 * Ensure manager started/shutdown/joined and reset
 * Return the same namedtuple that the future module returns
 * Add a simplistic hello world example
@@ -790,7 +798,7 @@ CHANGES
 * Move the engine scoping test to its engines test folder
 * Get the basics of a process executor working
 * Move the persistence base to the parent directory
-* Correctly trigger 'on_exit' of starting/initial state
+* Correctly trigger 'on\_exit' of starting/initial state
 
 0.6.0
 -----
@@ -801,21 +809,21 @@ CHANGES
 * Updated from global requirements
 * Add a basic map/reduce example to show how this can be done
 * Add a parallel table mutation example
-* Add a 'can_be_registered' method that checks before notifying
-* Base task executor should provide 'wait_for_any'
+* Add a 'can\_be\_registered' method that checks before notifying
+* Base task executor should provide 'wait\_for\_any'
 * Replace autobind with a notifier module helper function
 * Cleanup some doc warnings/bad/broken links
 * Use the notifier type in the task class/module directly
-* Use a tiny clamp helper to clamp the 'on_progress' value
+* Use a tiny clamp helper to clamp the 'on\_progress' value
 * Retain the existence of a 'EngineBase' until 0.7 or later
 * Remove the base postfix from the internal task executor
 * Remove usage of listener base postfix
-* Add a moved_inheritable_class deprecation helper
+* Add a moved\_inheritable\_class deprecation helper
 * Avoid holding the lock while scanning for existing jobs
 * Remove the base postfix for engine abstract base class
 * Avoid popping while another entity is iterating
 * Updated from global requirements
-* Use explict 'attr_dict' when adding provider->consumer edge
+* Use explict 'attr\_dict' when adding provider->consumer edge
 * Properly handle and skip empty intermediary flows
 * Ensure message gets processed correctly
 * Just assign a empty collection instead of copy/clear
@@ -824,9 +832,9 @@ CHANGES
 * Have the sphinx copyright date be dynamic
 * Add appropriate links into README.rst
 * Use condition variables using 'with'
-* Use an appropriate ``extract_traceback`` limit
+* Use an appropriate \`\`extract\_traceback\`\` limit
 * Allow all deprecation helpers to take a stacklevel
-* Correctly identify stack level in ``_extract_engine``
+* Correctly identify stack level in \`\`\_extract\_engine\`\`
 * Stop returning atoms from execute/revert methods
 * Have tasks be able to provide copy() methods
 * Allow stopwatches to be restarted
@@ -838,33 +846,33 @@ CHANGES
 * Ensure frozen attribute is set in fsm clones/copies
 * Fix split on "+" for connection strings that specify dialects
 * Update listeners to ensure they correctly handle all atoms
-* Allow for the notifier to provide a 'details_filter'
+* Allow for the notifier to provide a 'details\_filter'
 * Be explicit about publish keyword arguments
-* Some package additions and adjustments to the env_builder.sh
+* Some package additions and adjustments to the env\_builder.sh
 * Cache immutable visible scopes in the runtime component
 * Raise value errors instead of asserts
 * Add a claims listener that connects job claims to engines
 * Split the scheduler into sub-schedulers
-* Use a module level constant to provide the DEFAULT_LISTEN_FOR
-* Move the _pformat() method to be a classmethod
+* Use a module level constant to provide the DEFAULT\_LISTEN\_FOR
+* Move the \_pformat() method to be a classmethod
 * Add link to issue 17911
 * Avoid deepcopying exception values
 * Include documentation of the utility modules
 * Use a metaclass to dynamically add testcases to example runner
-* Remove default setting of 'mysql_traditional_mode'
+* Remove default setting of 'mysql\_traditional\_mode'
 * Move scheduler and completer classes to there own modules
 * Ensure that the zookeeper backend creates missing atoms
 * Use the deprecation utility module instead of warnings
 * Tweaks to setup.cfg
 * Add a jobboard high level architecture diagram
-* Mark 'task_notifier' as renamed to 'atom_notifier'
+* Mark 'task\_notifier' as renamed to 'atom\_notifier'
 * Revert wrapt usage until further notice
 * Updated from global requirements
 * Add a history retry object, makes retry histories easier to use
 * Format failures via a static method
-* When creating daemon threads use the bundled threading_utils
+* When creating daemon threads use the bundled threading\_utils
 * Ensure failure types contain only immutable items
-* Mark 'task_notifier' as renamed to 'atom_notifier'
+* Mark 'task\_notifier' as renamed to 'atom\_notifier'
 * Use wrapt to provide the deprecated class proxy
 * Updated from global requirements
 * Updated from global requirements
@@ -873,11 +881,11 @@ CHANGES
 * Link bug in requirements so people understand why pbr is listed
 * Updated from global requirements
 * Use standard threading locks in the cache types
-* Handle the case where '_exc_type_names' is empty
+* Handle the case where '\_exc\_type\_names' is empty
 * Add pbr to installation requirements
 * Updated from global requirements
 * Remove direct usage of the deprecated failure location
-* Fix the example 'default_provides'
+* Fix the example 'default\_provides'
 * Use constants for retry automatically provided kwargs
 * Remove direct usage of the deprecated notifier location
 * Remove attrdict and just use existing types
@@ -885,7 +893,7 @@ CHANGES
 * Add a futures type that can unify our future functionality
 * Bump the deprecation version number
 * Use and verify event and latch wait() return using timeouts
-* Deprecate `engine_conf` and prefer `engine` instead
+* Deprecate \`engine\_conf\` and prefer \`engine\` instead
 * Use constants for link metadata keys
 * Bump up the sqlalchemy version for py26
 * Hoist the notifier to its own module
@@ -910,14 +918,14 @@ CHANGES
 * Updated from global requirements
 * Add a more dynamic/useful logging listener
 * Use timeutils functions instead of misc.wallclock
-* Expose only `ensure_atom` from storage
+* Expose only \`ensure\_atom\` from storage
 * Adjust docs+venv tox environments requirements/dependencies
 * Increase robustness of WBE message and request processing
 * Adjust the WBE log levels
 * Use the features that the oslotest mock base class provides
 * Use oslotest to provide our base test case class
 * Jobboard example that show jobs + workers + producers
-* Adjust on_job_posting to not hold the lock while investigating
+* Adjust on\_job\_posting to not hold the lock while investigating
 * Bring in a newer optional eventlet
 * Move some of the custom requirements out of tox.ini
 * Document more function/class/method params
@@ -936,7 +944,7 @@ CHANGES
 * Ensure state machine can be frozen
 * Link a few of the classes to implemented features/bugs in python
 * Add a timing listener that also prints the results
-* Remove useless __exit__ return
+* Remove useless \_\_exit\_\_ return
 * Example which shows how to move values from one task to another
 * Mention issue with more than one thread and reduce workers
 * Add a mandelbrot parallel calculation WBE example
@@ -970,11 +978,11 @@ CHANGES
 * Reject WBE messages if they can't be put in an ack state
 * Make version.py handle pbr not being installed
 * Cleanup WBE example to be simpler to understand
-* Use __qualname__ where appropriate
+* Use \_\_qualname\_\_ where appropriate
 * Updated from global requirements
 * Updated from global requirements
 * Make the WBE worker banner information more meaningful
-* Have the dispatch_job function return a future
+* Have the dispatch\_job function return a future
 * Expand documention on failures and wrapped failures types
 * Allow worker count to be specified when no executor provided
 * Remove sphinx examples emphasize-lines
@@ -986,7 +994,7 @@ CHANGES
 * LOG which requeue filter callback failed
 * Add a pformat() failure method and use it in the conductor
 * add pre/post execute/retry callbacks to tasks
-* Use checked_commit() around consume() and abandon()
+* Use checked\_commit() around consume() and abandon()
 * Use a check + create transaction when claiming a job
 * Improve WBE testing coverage
 * Add basic WBE validation sanity tests
@@ -1008,22 +1016,22 @@ CHANGES
 * Make greenexecutor not keep greenthreads active
 * Add the arch/big picture omnigraffle diagram
 * Remove pbr as a runtime dependency
-* Use the `state_graph.py` for all states diagrams
+* Use the \`state\_graph.py\` for all states diagrams
 * Make the examples documentation more relevant
 * Raise NotImplementedError instead of NotImplemented
-* Move the stopwatch tests to test_types
-* Remove need to do special exception catching in parse_uri
+* Move the stopwatch tests to test\_types
+* Remove need to do special exception catching in parse\_uri
 * Update oslo incubator code to commit 0b02fc0f36814968
 * Fix the section name in CONTRIBUTING.rst
 * Add a conductor considerations section
 * Make the expiring cache a top level cache type
-* Use `flow_uuid` and `flow_name` from storage
+* Use \`flow\_uuid\` and \`flow\_name\` from storage
 * Fix traces left in zookeeper
 * Clarify locked decorator is for instance methods
 * Extract the state changes from the ensure storage method
 * Create a top level time type
 * Simplify identity transition handling for tasks and retries
-* Remove check_doc.py and use doc8
+* Remove check\_doc.py and use doc8
 * Remove functions created for pre-six 1.7.0
 * Add a tree type
 * Make intentions a tuple (to denote immutability)
@@ -1034,7 +1042,7 @@ CHANGES
 * Adjust sphinx requirement
 * Upgrade hacking version and fix some of the issues
 * Denote that other projects can use this library
-* Remove misc.as_bool as oslo provides an equivalent
+* Remove misc.as\_bool as oslo provides an equivalent
 * Update zake to requirements version
 
 0.3.21
@@ -1049,7 +1057,7 @@ CHANGES
 * Add in default transaction isolation levels
 * Allow the mysql mode to be more than just TRADITIONAL
 * Make the runner a runtime provided property
-* Rename inject_task_args to inject_atom_args
+* Rename inject\_task\_args to inject\_atom\_args
 * Rename the graph analyzer to analyzer
 * Provide the compilation object instead of just a part of it
 * Ensure cachedproperty descriptor picks up docstrings
@@ -1062,16 +1070,16 @@ CHANGES
 * Invert the conductor stop() returned result
 * Move flattening to the action engine compiler
 * Increase the level of usefulness of the dispatching logging
-* Avoid forcing engine_conf to a dict
+* Avoid forcing engine\_conf to a dict
 * Allow for two ways to find a flow detail in a job for a conductor
 * Add docs related to the new conductor feature
 * Add docstring describing the inject instance variable
-* Finish factoring apart the graph_action module
+* Finish factoring apart the graph\_action module
 * Update sphinx pin from global requirements
 * Fix docstring list format
 * Allow indent text to be passed in
-* Factor out the on_failure to a mixin type
-* Use a name property setter instead of a set_name method
+* Factor out the on\_failure to a mixin type
+* Use a name property setter instead of a set\_name method
 * Adds a single threaded flow conductor
 * add the ability to inject arguments into tasks at task creation
 * Synced jsonutils from oslo-incubator
@@ -1084,10 +1092,10 @@ CHANGES
 * Standardize on the same capitalization pattern
 * Regenerate engine-state sequence diagram
 * Add source of engine-state sequence diagram
-* Add kwarg check_pending argument to fake lock
-* Add a example which uses the run_iter function in a for loop
+* Add kwarg check\_pending argument to fake lock
+* Add a example which uses the run\_iter function in a for loop
 * Fix error string interpolation
-* Rename t_storage to atom_storage
+* Rename t\_storage to atom\_storage
 * Create and use a new compilation module
 * Add engine state diagram
 * Add tests for the misc.cachedproperty descriptor
@@ -1096,13 +1104,13 @@ CHANGES
 * Use futures wait() when possible
 * Use /taskflow/flush-test in the flush function
 * Add a reset nodes function
-* Default the impl_memory conf to none
+* Default the impl\_memory conf to none
 * Fix spelling mistake
 * Add a helper tool which clears zookeeper test dirs
 * Add a zookeeper jobboard integration test
 * Cleanup zookeeper integration testing
 * Use a more stable flush method
-* Remove the _clear method and do not reset the job_watcher
+* Remove the \_clear method and do not reset the job\_watcher
 * Allow command and connection retry configuration
 * Check documentation for simple style requirements
 * Add an example which uses the run iteration functionality
@@ -1112,7 +1120,7 @@ CHANGES
 * Add a new wait() method that waits for jobs to arrive
 * Add a cachedproperty descriptor
 * Add an example for the job board feature
-* Engine _cls postfix is not correct
+* Engine \_cls postfix is not correct
 * Pass executor via kwargs instead of config
 * Allow the WBE to use a preexisting executor
 * Tweaks to object hiearchy diagrams
@@ -1132,13 +1140,13 @@ CHANGES
 * Documentation tune-ups
 * Fix spelling error
 * Add a resumption strategy doc
-* Docs and cleanups for test_examples runner
+* Docs and cleanups for test\_examples runner
 * Skip loading (and failing to load) lock files
 * Add a persistence backend fetching context manager
 * Add a example that activates a future when a result is ready
 * Fix documentation spelling errors
 * Add a job consideration doc
-* Add last_modified & created_on attributes to jobs
+* Add last\_modified & created\_on attributes to jobs
 * Allow jobboard event notification
 * Use sequencing when posting jobs
 * Add a directed graph type (new types module)
@@ -1160,7 +1168,7 @@ CHANGES
 * Allow for only iterating over the most 'fresh' jobs
 * Updated from global requirements
 * Update oslo-incubator to 46f2b697b6aacc67
-* import run_cross_tests.sh from incubator
+* import run\_cross\_tests.sh from incubator
 * Exception in worker queue thread
 * Avoid holding the state lock while notifying
 
@@ -1171,15 +1179,15 @@ CHANGES
 * Use correct exception in the timing listener
 * Add a engine preparation stage
 * Decrease extraneous logging
-* Handle retry last_results/last_failure better
+* Handle retry last\_results/last\_failure better
 * Improve documentation for engines
 * Worker executor adjustments
 * Revert "Move taskflow.utils.misc.Failure to its own module"
 * Move taskflow.utils.misc.Failure to its own module
-* Leave the execution_graph as none until compiled
+* Leave the execution\_graph as none until compiled
 * Move state link to developer docs
 * Raise error if atom asked to schedule with unknown intention
-* Removed unused TIMED_OUT state
+* Removed unused TIMED\_OUT state
 * Rework documentation of notifications
 * Test retry fails on revert
 * Exception when scheduling task with invalid state
@@ -1197,7 +1205,7 @@ CHANGES
 * Optimize dependency links in flattening
 * Adjust the exception hierachy
 * docs: Links to methods on arguments and results page
-* Add __repr__ method to Atom
+* Add \_\_repr\_\_ method to Atom
 * Flattening improvements
 * tests: Fix WaitForOneFromTask constructor parameter introspection
 * Rework graph flow unit tests
@@ -1205,7 +1213,7 @@ CHANGES
 * Unit tests for unordered flow
 * Linear flow: mark links and rework unit tests
 * Drop indexing operator from linear flow
-* Drop obsolete test_unordered_flow
+* Drop obsolete test\_unordered\_flow
 * Iteration over links in flow interface
 * Add a timeout object that can be interrupted
 * Avoid shutting down of a passed executor
@@ -1233,13 +1241,13 @@ CHANGES
 * Add retry to execution graph
 * Add retry to Flow patterns
 * Add base class for Retry
-* Update request `expired` property docsting
+* Update request \`expired\` property docsting
 * docs: Add page describing atom arguments and results
 * docs: Improve BaseTask method docstrings
 * Remove extra quote symbol
 * docs: Relative links improvements
 * docs: Ingore 'taskflow.' prefix when sorting module index
-* Update comment + six.text_type instead of str for name
+* Update comment + six.text\_type instead of str for name
 * Avoid calling callbacks while holding locks
 * Rename remote task to request
 * Rework proxy publish functionality
@@ -1255,20 +1263,20 @@ CHANGES
 * Allow connection string to be just backend name
 * Get rid of openstack.common.py3kcompat
 * Clean-up several comments in reflection.py
-* Fix try_clean not getting the job_path
+* Fix try\_clean not getting the job\_path
 * Updated from global requirements
 * Rename uuid to topic
-* Fixups for threads_count usage and logging
+* Fixups for threads\_count usage and logging
 * Use the stop watch utility instead of custom timing
 * Unify usage of storage error exception type
 * Add zookeeper job/jobboard impl
 * Updated from global requirements
 * Removed copyright from empty files
 * Remove extraneous vim configuration comments
-* Use six.text_type() instead of str() in sqlalchemy backend
-* Fix dummy lock missing pending_writers method
-* Move some common/to be shared kazoo utils to kazoo_utils
-* Switch to using the type checking decode_json
+* Use six.text\_type() instead of str() in sqlalchemy backend
+* Fix dummy lock missing pending\_writers method
+* Move some common/to be shared kazoo utils to kazoo\_utils
+* Switch to using the type checking decode\_json
 * Fix few spelling and grammar errors
 * Fixed spelling error
 * Run action-engine tests with worker-based engine
@@ -1292,10 +1300,10 @@ CHANGES
 -----
 
 * Add validate() base method
-* Fix deadlock on waiting for pending_writers to be empty
-* Rename self._zk to self._client
-* Use listener instead of AutoSuspendTask in test_suspend_flow
-* Use test utils in test_suspend_flow
+* Fix deadlock on waiting for pending\_writers to be empty
+* Rename self.\_zk to self.\_client
+* Use listener instead of AutoSuspendTask in test\_suspend\_flow
+* Use test utils in test\_suspend\_flow
 * Use reader/writer locks in storage
 * Allow the usage of a passed in sqlalchemy engine
 * Be really careful with non-ascii data in exceptions/failures
@@ -1316,7 +1324,7 @@ CHANGES
 * Pin testtools to 0.9.34 in test requirements
 * Ensure we register the new zookeeper backend as an entrypoint
 * Implement ZooKeeper as persistence storage backend
-* Use addCleanup instead of tearDown in test_sql_persistence
+* Use addCleanup instead of tearDown in test\_sql\_persistence
 * Retain the same api for all helpers
 * Update execute/revert comments
 * Added more unit tests for Task and FunctorTask
@@ -1334,13 +1342,13 @@ CHANGES
 * Add base class Atom for all flow units
 * Add more requirements to cover tox environment
 * Put SQLAlchemy requirements on single line
-* Proper exception raised from check_task_transition
+* Proper exception raised from check\_task\_transition
 * Fix function name typo in persistence utils
 * Use the same way of assert isinstance in all tests
-* Minor cleanup in test_examples
+* Minor cleanup in test\_examples
 * Add possibility to create Failure from exception
 * Exceptions cleanup
-* Alter is_locked() helper comment
+* Alter is\_locked() helper comment
 * Add a setup.cfg keywords to describe taskflow
 * Use the released toxgen tool instead of our copy
 
@@ -1355,18 +1363,18 @@ CHANGES
 * Move six to the right location
 * Use constants for the execution event strings
 * Added htmlcov folder to .gitignore
-* Reduce visibility of task_action
+* Reduce visibility of task\_action
 * Change internal data store of LogBook from list to dict
 * Misc minor fixes to taskflow/examples
-* Add connection_proxy param
+* Add connection\_proxy param
 * Ignore doc build files
 * Fix spelling errors
 * Switch to just using tox
 * Enable H202 warning for flake8
 * Check tasks should not provide same values
-* Allow max_backoff and use count instead of attempts
+* Allow max\_backoff and use count instead of attempts
 * Skip invariant checking and adding when nothing provided
-* Avoid not_done naming conflict
+* Avoid not\_done naming conflict
 * Add stronger checking of backend configuration
 * Raise type error instead of silencing it
 * Move the container fetcher function to utils
@@ -1374,14 +1382,14 @@ CHANGES
 * Name the graph property the same as in engine
 * Bind outside of the try block
 * Graph action refactoring
-* Add make_completed_future to async_utils
+* Add make\_completed\_future to async\_utils
 * Update oslo-incubator copy to oslo-incubator commit 8b2b0b743
 * Ensure that mysql traditional mode is enabled
 * Move async utils to own file
 * Update requirements from opentack/requirements
-* Code cleanup for eventlet_utils.wait_fo_any
+* Code cleanup for eventlet\_utils.wait\_fo\_any
 * Refactor engine internals
-* Add wait_for_any method to eventlet utils
+* Add wait\_for\_any method to eventlet utils
 * Introduce TaskExecutor
 * Run some engine tests with eventlet if it's available
 * Do not create TaskAction for each task
@@ -1392,7 +1400,7 @@ CHANGES
 * Speed up FlowDetail.find
 * Fix misspellings
 * Raise exception when trying to run empty flow
-* Use update_task_metadata in set_task_progress
+* Use update\_task\_metadata in set\_task\_progress
 * Capture task duration
 * Fix another instance of callback comparison
 * Don't forget to return self
@@ -1400,7 +1408,7 @@ CHANGES
 * Targeted graph flow pattern
 * All classes should explicitly inherit object class
 * Initial commit of sphinx related files
-* Improve is_valid_attribute_name utility function
+* Improve is\_valid\_attribute\_name utility function
 * Coverage calculation improvements
 * Fix up python 3.3 incompatabilities
 
@@ -1425,29 +1433,29 @@ CHANGES
 * Add debug logging showing what is flattened
 * Remove incorrect comment
 * Unit tests refactoring
-* Use py3kcompat.urlutils from oslo instead of six.urllib_parse
+* Use py3kcompat.urlutils from oslo instead of six.urllib\_parse
 * Update oslo and bring py3kcompat in
-* Support several output formats in state_graph tool
-* Remove task_action state checks
+* Support several output formats in state\_graph tool
+* Remove task\_action state checks
 * Wrapped exception doc/intro comment updates
-* Doc/intro updates for simple_linear_listening
-* Add docs/intro to simple_linear example
-* Update intro/comments for reverting_linear example
-* Add docs explaining what/how resume_volume_create works
+* Doc/intro updates for simple\_linear\_listening
+* Add docs/intro to simple\_linear example
+* Update intro/comments for reverting\_linear example
+* Add docs explaining what/how resume\_volume\_create works
 * A few resuming from backend comment adjustments
-* Add an introduction to explain resume_many example
+* Add an introduction to explain resume\_many example
 * Increase persistence example comments
 * Boost graph flow example comments
-* Also allow "_" to be valid identifier
+* Also allow "\_" to be valid identifier
 * Remove uuid from taskflow.flow.Flow
-* A few additional example boot_vm comments + tweaks
+* A few additional example boot\_vm comments + tweaks
 * Add a resuming booting vm example
 * Add task state verification
 * Beef up storage comments
 * Removed unused utilities
 * Helpers to save flow factory in metadata
 * Storage: add flow name and uuid properties
-* Create logbook if not provided for create_flow_details
+* Create logbook if not provided for create\_flow\_details
 * Prepare for 0.1 release
 * Comment additions for exponential backoff
 * Beef up the action engine comments
@@ -1455,7 +1463,7 @@ CHANGES
 * Add more comments to flow/task
 * Save with the same connection
 * Add a persistence util logbook formatting function
-* Rename get_graph() -> execution_graph
+* Rename get\_graph() -> execution\_graph
 * Continue adding docs to examples
 * Add more comments that explain example & usage
 * Add more comments that explain example & usage
@@ -1535,7 +1543,7 @@ CHANGES
 * Allow engines to be copied + blacklist broken flows
 * Add link to why we have to make this factory due to late binding
 * Use the lock decorator and close/join the thread pool
-* Engine, task, linear_flow unification
+* Engine, task, linear\_flow unification
 * Combine multiple exceptions into a linked one
 * Converted some examples to use patterns/engines
 * MultiThreaded engine and parallel action
@@ -1544,21 +1552,21 @@ CHANGES
 * Initial implementation of action-based engine
 * Further updates to update.py
 * Split utils module
-* Rename Task.__call__ to Task.execute
+* Rename Task.\_\_call\_\_ to Task.execute
 * Reader/writer no longer used
-* Rename "revert_with" => "revert" and "execute_with" to "execute"
+* Rename "revert\_with" => "revert" and "execute\_with" to "execute"
 * Notify on task reversion
 * Have runner keep the exception
 * Use distutil version classes
 * Add features to task.Task
-* Add get_required_callable_args utility function
-* Add get_callable_name utility function
-* Require uuid + move functor_task to task.py
+* Add get\_required\_callable\_args utility function
+* Add get\_callable\_name utility function
+* Require uuid + move functor\_task to task.py
 * Check examples when running tests
 * Use the same root test class
 * LazyPluggable is no longer used
 * Add a locally running threaded flow
-* Change namings in functor_task and add docs to its __init__
+* Change namings in functor\_task and add docs to its \_\_init\_\_
 * Rework the persistence layer
 * Do not have the runner modify the uuid
 * Refactor decorators
@@ -1577,7 +1585,7 @@ CHANGES
 * Add a more complicated graph example
 * Move examples under the source tree
 * Adjust a bunch of hacking violations
-* Fix typos in test_linear_flow.py and simple_linear_listening.py
+* Fix typos in test\_linear\_flow.py and simple\_linear\_listening.py
 * Fix minor code style
 * Fix two minor bugs in docs/examples
 * Show file modifications and fix dirpath based on config file
@@ -1603,20 +1611,20 @@ CHANGES
 * Add a start of a few simple examples
 * Update readme to point to links
 * Fix most of the hacking rules
-* Fix all flake8 E* and F* errors
+* Fix all flake8 E\* and F\* errors
 * Fix the current flake8 errors
 * Don't keep the state/version in the task name
 * Dinky change to trigger jenkins so I can cleanup
 * Add the task to the accumulator before running
 * Add .settings and .venv into .gitignore
 * Fix tests for python 2.6
-* Add the ability to soft_reset a workflow
+* Add the ability to soft\_reset a workflow
 * Add a .gitreview file so that git-review works
-* Ensure we have an exception and capture the exc_info
+* Ensure we have an exception and capture the exc\_info
 * Update how graph results are fetched when they are optional
 * Allow for optional task requirements
 * We were not notifying when errors occured so fix that
-* Bring over the nova get_wrapped_function helper and use it
+* Bring over the nova get\_wrapped\_function helper and use it
 * Allow for passing in the metadata when creating a task detail entry
 * Update how the version task functor attribute is found
 * Remove more tabs incidents
@@ -1633,7 +1641,7 @@ CHANGES
 * Reduce test noise
 * Fix a few unit tests due to changes
 * Ensure we handle functor names and resetting correctly
-* Remove safe_attr
+* Remove safe\_attr
 * Modifying db tests
 * Removing .pyc
 * Fixing .py in .gitignore
@@ -1645,7 +1653,7 @@ CHANGES
 * Move decorators to new file and update to use better wraps()
 * Continue work with decorator usage
 * Update with adding a provides and requires decorator for standalone function usage
-* Instead of apply use __call__
+* Instead of apply use \_\_call\_\_
 * Add comment to why we accumulate before notifying task listeners
 * Use a default sqlite backing using a taskflow file
 * Add a basic rollback accumlator test
@@ -1743,7 +1751,7 @@ CHANGES
 * Move ordered workflow to its own file
 * Increase the number of comments
 * Start adding in a more generic DAG based workflow
-* Remove dict_provider dependency
+* Remove dict\_provider dependency
 * Rework due to code comments
 * Begin adding testing functionality
 * Fill in the majority of the memory job
