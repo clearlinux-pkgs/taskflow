@@ -1,6 +1,104 @@
 CHANGES
 =======
 
+3.2.0
+-----
+
+* Remove unused link target
+* Fix code to support networkx > 1.0
+* add release notes to README.rst
+* replace http with https
+* Update links in README
+* fix tox python3 overrides
+* Drop py34 target in tox.ini
+* Uncap networkx
+* give pep8 and docs environments all of the dependencies they need
+* Trivial: update pypi url to new url
+* Fix doc build
+* Trivial: Update pypi url to new url
+* stop using tox\_install.sh
+* only run doc8 as part of pep8 test job
+* standardize indentation in tox.ini
+* set default python to python3
+* don't let tox\_install.sh error if there is nothing to do
+* Updated from global requirements
+* add lower-constraints job
+* Updated from global requirements
+* Fix invalid json unit test
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+3.1.0
+-----
+
+* Updated from global requirements
+* Add doc8 to pep8 environment
+* Use doc/requirements.txt
+
+3.0.1
+-----
+
+
+3.0.0
+-----
+
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Remove class StopWatch from timing
+
+2.17.0
+------
+
+
+2.16.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Update "indentify" to "identify" in comments
+
+2.15.0
+------
+
+* Updated from global requirements
+* Remove method blather in log adapter
+* Remove kwarg timeout in executor conductor
+* Updated from global requirements
+* Avoid log warning when closing is underway (on purpose)
+* Update reno for stable/pike
+* Updated from global requirements
+
+2.14.0
+------
+
+* Updated from global requirements
+* Update URLs in documents according to document migration
+* Updated from global requirements
+* Fix process based executor task proxying-back events
+* turn on warning-is-error in doc build
+* switch from oslosphinx to openstackdocstheme
+* rearrange existing documentation into the new standard layout
+* Updated from global requirements
+
+2.13.0
+------
+
+* Updated from global requirements
+* Fix html\_last\_updated\_fmt for Python3
+* Replace assertRaisesRegexp with assertRaisesRegex
+
+2.12.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* do not allow redis job reclaim by same owner
+
 2.11.0
 ------
 
