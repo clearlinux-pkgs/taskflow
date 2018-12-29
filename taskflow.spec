@@ -6,7 +6,7 @@
 #
 Name     : taskflow
 Version  : 3.3.1
-Release  : 51
+Release  : 52
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.3.1.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.3.1.tar.gz
 Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.3.1.tar.gz.asc
