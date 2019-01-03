@@ -1,10 +1,17 @@
 CHANGES
 =======
 
+3.4.0
+-----
+
+* Move test requirements out of runtime requirements
+* Change openstack-dev to openstack-discuss
+
 3.3.1
 -----
 
 * Update doc/conf.py to avoid warnings with sphinx 1.8
+* Use templates for cover and lower-constraints
 * Remove the duplicated word
 * Fix a symbol error
 * Create KazooClient with taskflow logger

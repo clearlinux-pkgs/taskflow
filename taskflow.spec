@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : taskflow
-Version  : 3.3.1
-Release  : 52
-URL      : http://tarballs.openstack.org/taskflow/taskflow-3.3.1.tar.gz
-Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.3.1.tar.gz
-Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.3.1.tar.gz.asc
+Version  : 3.4.0
+Release  : 53
+URL      : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
+Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
+Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz.asc
 Summary  : Taskflow structured state management library.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -44,7 +44,6 @@ Requires: pydot
 Requires: redis
 Requires: reno
 Requires: six
-Requires: stestr
 Requires: stevedore
 Requires: tenacity
 Requires: zake
@@ -53,8 +52,7 @@ BuildRequires : pbr
 BuildRequires : tenacity
 
 %description
-Team and repository tags
-        ========================
+Please see https://alembic.readthedocs.org/en/latest/index.html for general documentation
 
 %package license
 Summary: license components for the taskflow package.
@@ -83,14 +81,15 @@ python3 components for the taskflow package.
 
 
 %prep
-%setup -q -n taskflow-3.3.1
+%setup -q -n taskflow-3.4.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541279903
+export SOURCE_DATE_EPOCH=1546553489
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
