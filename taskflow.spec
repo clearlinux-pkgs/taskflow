@@ -6,7 +6,7 @@
 #
 Name     : taskflow
 Version  : 3.4.0
-Release  : 54
+Release  : 55
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz.asc
@@ -81,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551036994
+export SOURCE_DATE_EPOCH=1551039350
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
