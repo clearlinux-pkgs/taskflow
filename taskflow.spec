@@ -6,7 +6,7 @@
 #
 Name     : taskflow
 Version  : 3.4.0
-Release  : 53
+Release  : 54
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz.asc
@@ -19,34 +19,27 @@ Requires: taskflow-python3 = %{version}-%{release}
 Requires: PyMySQL
 Requires: SQLAlchemy
 Requires: SQLAlchemy-Utils
-Requires: Sphinx
 Requires: alembic
 Requires: automaton
 Requires: cachetools
 Requires: contextlib2
 Requires: debtcollector
-Requires: doc8
 Requires: enum34
 Requires: eventlet
 Requires: fasteners
 Requires: futures
 Requires: futurist
 Requires: jsonschema
-Requires: kazoo
-Requires: kombu
 Requires: networkx
-Requires: openstackdocstheme
 Requires: oslo.serialization
 Requires: oslo.utils
 Requires: pbr
 Requires: psycopg2
 Requires: pydot
 Requires: redis
-Requires: reno
 Requires: six
 Requires: stevedore
 Requires: tenacity
-Requires: zake
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 BuildRequires : tenacity
@@ -88,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546553489
+export SOURCE_DATE_EPOCH=1551036994
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
