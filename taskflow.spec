@@ -6,7 +6,7 @@
 #
 Name     : taskflow
 Version  : 3.4.0
-Release  : 55
+Release  : 56
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz.asc
