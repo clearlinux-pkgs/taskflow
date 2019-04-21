@@ -6,7 +6,7 @@
 #
 Name     : taskflow
 Version  : 3.4.0
-Release  : 56
+Release  : 57
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
 Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz.asc
@@ -43,6 +43,7 @@ Requires: tenacity
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 BuildRequires : tenacity
+Patch1: reqs.patch
 
 %description
 Please see https://alembic.readthedocs.org/en/latest/index.html for general documentation
@@ -75,17 +76,19 @@ python3 components for the taskflow package.
 
 %prep
 %setup -q -n taskflow-3.4.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551039350
+export SOURCE_DATE_EPOCH=1555819080
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/taskflow
 cp LICENSE %{buildroot}/usr/share/package-licenses/taskflow/LICENSE
