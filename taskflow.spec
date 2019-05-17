@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : taskflow
-Version  : 3.4.0
-Release  : 58
-URL      : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
-Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz
-Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.4.0.tar.gz.asc
+Version  : 3.5.0
+Release  : 59
+URL      : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
+Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
+Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz.asc
 Summary  : Taskflow structured state management library.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -40,8 +40,30 @@ Requires: redis
 Requires: six
 Requires: stevedore
 Requires: tenacity
+BuildRequires : PyMySQL
+BuildRequires : SQLAlchemy
+BuildRequires : SQLAlchemy-Utils
+BuildRequires : alembic
+BuildRequires : automaton
 BuildRequires : buildreq-distutils3
+BuildRequires : cachetools
+BuildRequires : contextlib2
+BuildRequires : debtcollector
+BuildRequires : enum34
+BuildRequires : eventlet
+BuildRequires : fasteners
+BuildRequires : futures
+BuildRequires : futurist
+BuildRequires : jsonschema
+BuildRequires : networkx
+BuildRequires : oslo.serialization
+BuildRequires : oslo.utils
 BuildRequires : pbr
+BuildRequires : psycopg2
+BuildRequires : pydot
+BuildRequires : redis
+BuildRequires : six
+BuildRequires : stevedore
 BuildRequires : tenacity
 Patch1: reqs.patch
 
@@ -75,7 +97,7 @@ python3 components for the taskflow package.
 
 
 %prep
-%setup -q -n taskflow-3.4.0
+%setup -q -n taskflow-3.5.0
 %patch1 -p1
 
 %build
@@ -83,7 +105,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1555819080
+export SOURCE_DATE_EPOCH=1558058976
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

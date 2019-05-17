@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+3.5.0
+-----
+
+* OpenDev Migration Patch
+* Raise lower constraint of psycopg2
+
 3.4.0
 -----
 
