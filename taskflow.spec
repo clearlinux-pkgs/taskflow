@@ -6,7 +6,7 @@
 #
 Name     : taskflow
 Version  : 3.5.0
-Release  : 59
+Release  : 60
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
 Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz.asc
@@ -27,7 +27,6 @@ Requires: debtcollector
 Requires: enum34
 Requires: eventlet
 Requires: fasteners
-Requires: futures
 Requires: futurist
 Requires: jsonschema
 Requires: networkx
@@ -52,7 +51,6 @@ BuildRequires : debtcollector
 BuildRequires : enum34
 BuildRequires : eventlet
 BuildRequires : fasteners
-BuildRequires : futures
 BuildRequires : futurist
 BuildRequires : jsonschema
 BuildRequires : networkx
@@ -68,7 +66,8 @@ BuildRequires : tenacity
 Patch1: reqs.patch
 
 %description
-Please see https://alembic.readthedocs.org/en/latest/index.html for general documentation
+Team and repository tags
+        ========================
 
 %package license
 Summary: license components for the taskflow package.
@@ -105,7 +104,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1558058976
+export SOURCE_DATE_EPOCH=1559110193
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
