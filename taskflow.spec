@@ -6,10 +6,10 @@
 #
 Name     : taskflow
 Version  : 3.5.0
-Release  : 60
+Release  : 61
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
-Source99 : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz.asc
+Source1 : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz.asc
 Summary  : Taskflow structured state management library.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -24,7 +24,6 @@ Requires: automaton
 Requires: cachetools
 Requires: contextlib2
 Requires: debtcollector
-Requires: enum34
 Requires: eventlet
 Requires: fasteners
 Requires: futurist
@@ -48,7 +47,6 @@ BuildRequires : buildreq-distutils3
 BuildRequires : cachetools
 BuildRequires : contextlib2
 BuildRequires : debtcollector
-BuildRequires : enum34
 BuildRequires : eventlet
 BuildRequires : fasteners
 BuildRequires : futurist
@@ -103,8 +101,8 @@ python3 components for the taskflow package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559110193
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571088108
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -120,7 +118,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/taskflow
-cp LICENSE %{buildroot}/usr/share/package-licenses/taskflow/LICENSE
+cp %{_builddir}/taskflow-3.5.0/LICENSE %{buildroot}/usr/share/package-licenses/taskflow/987f2e77cc1fa9c15dc5b849c5fbd7534407bb2a
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -131,7 +129,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/taskflow/LICENSE
+/usr/share/package-licenses/taskflow/987f2e77cc1fa9c15dc5b849c5fbd7534407bb2a
 
 %files python
 %defattr(-,root,root,-)
