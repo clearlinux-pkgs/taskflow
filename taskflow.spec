@@ -6,10 +6,10 @@
 #
 Name     : taskflow
 Version  : 3.5.0
-Release  : 62
+Release  : 63
 URL      : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
 Source0  : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz
-Source1 : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz.asc
+Source1  : http://tarballs.openstack.org/taskflow/taskflow-3.5.0.tar.gz.asc
 Summary  : Taskflow structured state management library.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -88,6 +88,20 @@ python components for the taskflow package.
 Summary: python3 components for the taskflow package.
 Group: Default
 Requires: python3-core
+Provides: pypi(taskflow)
+Requires: pypi(automaton)
+Requires: pypi(cachetools)
+Requires: pypi(fasteners)
+Requires: pypi(futurist)
+Requires: pypi(jsonschema)
+Requires: pypi(networkx)
+Requires: pypi(oslo.serialization)
+Requires: pypi(oslo.utils)
+Requires: pypi(pbr)
+Requires: pypi(pydot)
+Requires: pypi(six)
+Requires: pypi(stevedore)
+Requires: pypi(tenacity)
 
 %description python3
 python3 components for the taskflow package.
@@ -95,6 +109,7 @@ python3 components for the taskflow package.
 
 %prep
 %setup -q -n taskflow-3.5.0
+cd %{_builddir}/taskflow-3.5.0
 %patch1 -p1
 
 %build
@@ -102,7 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571088108
+export SOURCE_DATE_EPOCH=1583715535
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
